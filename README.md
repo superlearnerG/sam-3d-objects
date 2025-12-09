@@ -25,6 +25,17 @@ SAM 3D Objects is one part of SAM 3D, a pair of models for object and human mesh
 
 **11/19/2025** - Checkpoints Launched, Web Demo and Paper are out.
 
+## Project Analysis
+
+For a detailed analysis of SAM 3D Objects' capabilities, particularly regarding multi-view images and multi-object consistency, please see:
+- [**中文分析文档** (Chinese Analysis)](PROJECT_ANALYSIS_CN.md) - 详细的项目功能分析和多视角能力评估
+- [**English Analysis**](PROJECT_ANALYSIS_EN.md) - Comprehensive project analysis and multi-view capability assessment
+
+These documents provide in-depth explanations of:
+- ✅ What SAM 3D Objects CAN do (single-view multi-object reconstruction)
+- ❌ What it CANNOT do (multi-view consistent masking)
+- 💡 Recommended approaches for different use cases
+
 ## Installation
 
 Follow the [setup](doc/setup.md) steps before running the following.
@@ -62,6 +73,8 @@ output = inference(image, mask, seed=42)
 # export gaussian splat
 output["gs"].save_ply(f"splat.ply")
 ```
+
+For a comprehensive multi-object example with detailed comments, see [`example_multi_object.py`](example_multi_object.py).
 
 For  more details and multi-object reconstruction, please take a look at out two jupyter notebooks:
 * [single object](notebook/demo_single_object.ipynb)
